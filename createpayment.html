@@ -1,0 +1,322 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(248, 247, 247);
+    }
+    
+    a link {
+        text-align: right;
+    }
+    
+    h1 {
+        background-color: #5d2e8e;
+        padding: 30px 5px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+    }
+    
+    h2 {
+        color: rgb(22, 22, 33);
+        text-align: center;
+        padding: 10px 40.5px 6px;
+    }
+    
+    h4 {
+        color: #666;
+        text-align: right;
+    }
+    
+    .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    
+    .button {
+        background-color: #008cba;
+    }
+    
+    #createM {
+        display: none;
+    }
+    
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #777474;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    
+    .button {
+        background-color: #352249;
+        text-align: end;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+    
+    .fname {
+        background-color: #5d2e8e;
+    }
+    
+    .container {
+        max-width: 700px;
+        width: 100%;
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        align-items: center;
+    }
+    
+    .container .title {
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+    }
+    
+    .container .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 30px;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    
+    .content form .user-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+    }
+    
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+    }
+    
+    form .input-box span.details {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    
+    .user-details .input-box input {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid {
+        border-color: #9b59b6;
+    }
+    
+    form .gender-details .gender-title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    form .category {
+        display: flex;
+        width: 80%;
+        margin: 14px 0;
+        justify-content: space-between;
+    }
+    
+    form .category label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    form .category label .dot {
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background: #d9d9d9;
+        border: 5px solid transparent;
+        transition: all 0.3s ease;
+    }
+    
+    #dot-1:checked~.category label .one,
+    #dot-2:checked~.category label .two,
+    #dot-3:checked~.category label .three {
+        background: #9b59b6;
+        border-color: #d9d9d9;
+    }
+    
+    form input[type="radio"] {
+        display: none;
+    }
+    
+    form .button {
+        height: 45px;
+        margin: 35px 0
+    }
+    
+    form .button input {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    
+    form .button input:hover {
+        /* transform: scale(0.99); */
+        background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    }
+    
+    @media(max-width: 584px) {
+        .container {
+            max-width: 100%;
+        }
+        form .user-details .input-box {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        form .category {
+            width: 100%;
+        }
+        .content form .user-details {
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+        .user-details::-webkit-scrollbar {
+            width: 5px;
+        }
+    }
+    
+    @media(max-width: 459px) {
+        .container .content .category {
+            flex-direction: column;
+        }
+    }
+    /* Blue */
+</style>
+
+<body>
+
+    <h2>Welcome Merchant </h2>
+
+    <h1 id="h11">Active Payments</h1>
+    <button class="button button1" id="createBtnDisplay">Create Payment</button>
+    <h4><a href="./homepage.html">Log out</a></h4>
+
+    <div id="activeM">
+        <table id="table">
+            <tr>
+                <th>S.N</th>
+                <th>Customer Name</th>
+                <th>Email</th>
+                <th>Bill</th>
+                <th>Discount Amount</th>
+                <th>Additional Charges</th>
+                <th>Status</th>
+                <th>Urllink</th>
+            </tr>
+        </table>
+
+
+
+    </div>
+
+    <!-- //login form -->
+    <div id="createM">
+
+        <!-- <form>
+            <label for="fname">Customer Name:</label><br />
+            <input required type="text" id="fname" name="fname" /><br />
+
+            <label for="ea">Customer Email ID:</label><br />
+            <input required type="text" id="ea" name="ea" /><br />
+
+            <label for="billAmount">Bill Amount:</label><br />
+            <input required type="number" id="billAmount" name="billAmount" /><br />
+
+            <label for="discount">Discount:</label><br />
+            <input required type="number" id="discount" name="discount" /><br />
+
+            <label for="charge"> Additional Charges:</label><br />
+            <input required type="number" id="charge" name="charge" /><br />
+
+            <label for="remark">Remarks</label><br />
+            <input required type="text" id="remark" name="remark" /><br />
+            <label for="Urllink">Urllink</label><br />
+            <input required type="text" id="Urllink" name="Urllink" /><br /> -->
+        <div class="user-details">
+
+            <div class="input-box">
+                <span class="details">Customer Name</span>
+                <input id="fname" type="text" placeholder="Enter your Customer Name" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Email ID</span>
+                <input id="ea" type="email" placeholder="Enter Customer email address" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Bill Amount</span>
+                <input id="billAmount" type="number" placeholder="Enter your Bill Amount" required>
+            </div>
+            <div class="input-box">
+                <span class="details"> Discount</span>
+                <input id="discount" type="number" placeholder="Enter your Discount Amount" required>
+            </div>
+            <div class="input-box">
+                <span class="details"> Additional Charges</span>
+                <input id="charge" type="number" placeholder="Enter additional charges" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Remarks</span>
+                <input id="remark" type="integer" placeholder="Remsrks" required>
+            </div>
+        </div>
+        </form>
+
+
+        <button id="createPayment" class="button button1">Generate Link</button>
+    </div>
+    <script src="./createPayment.js" type="module"></script>
+</body>
+
+</html>

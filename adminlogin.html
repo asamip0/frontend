@@ -1,0 +1,111 @@
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+        
+        body {
+            background-color: #E8EDF2;
+        }
+        
+        .logo {
+            width: 160px;
+            cursor: pointer;
+        }
+        
+        div.container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 50px 50px -50px darkslategray;
+        }
+        
+        div.container div.myform {
+            width: 270px;
+            margin-right: 30px;
+        }
+        
+        div.container div.myform h2 {
+            color: #1c1c1e;
+            margin-bottom: 20px;
+        }
+        
+        div.container div.myform input {
+            border: none;
+            outline: none;
+            border-radius: 0;
+            width: 100%;
+            border-bottom: 2px solid #1c1c1e;
+            margin-bottom: 25px;
+            padding: 7px 0;
+            font-size: 14px;
+        }
+        
+        div.container div.myform button {
+            color: white;
+            background-color: #1c1c1e;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            font-size: 14px;
+            padding: 5px 12px;
+            font-weight: 500;
+        }
+        
+        div.container div.image img {
+            width: 300px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login Panel</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+
+    <div class="hero">
+        <nav>
+            <!-- <img src="menu.png" class="menu-img"> -->
+            <a href="homepage.html">
+                <img src="logo.png" class="logo">
+            </a>
+        </nav>
+
+        <div class="container">
+            <div class="myform">
+
+                <h2>ADMIN LOGIN</h2>
+
+                <input type="text" id="username" placeholder="Admin Name">
+
+                <input type="password" id="password" placeholder="Password">
+
+                <button id="submitBtn">Login</button>
+
+            </div>
+            <div class="image">
+                <img src="image.png">
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="./adminlogin.js" type="module">
+    </script>
+</body>
+
+</html>

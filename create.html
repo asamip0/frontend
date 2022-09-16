@@ -1,0 +1,317 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(248, 247, 247);
+    }
+    
+    h1 {
+        background-color: #5d2e8e;
+        padding: 30px 5px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+    }
+    
+    h2 {
+        color: rgb(22, 22, 33);
+        text-align: center;
+        padding: 10px 40.5px 6px;
+    }
+    
+    h4 {
+        text-align: end;
+        color: #666;
+        text-decoration: none;
+    }
+    
+    .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    
+    .button {
+        background-color: #008cba;
+    }
+    
+    #createM {
+        display: none;
+    }
+    
+    label {
+        text-align: center;
+    }
+    
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #777474;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    
+    .button {
+        background-color: #352249;
+        text-align: end;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+    
+    .fname {
+        background-color: #5d2e8e;
+    }
+    
+    .container {
+        max-width: 700px;
+        width: 100%;
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        align-items: center;
+    }
+    
+    .container .title {
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+    }
+    
+    .container .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 30px;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    
+    .content form .user-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+    }
+    
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+    }
+    
+    form .input-box span.details {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    
+    .user-details .input-box input {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid {
+        border-color: #9b59b6;
+    }
+    
+    form .gender-details .gender-title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    form .category {
+        display: flex;
+        width: 80%;
+        margin: 14px 0;
+        justify-content: space-between;
+    }
+    
+    form .category label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    form .category label .dot {
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background: #d9d9d9;
+        border: 5px solid transparent;
+        transition: all 0.3s ease;
+    }
+    
+    #dot-1:checked~.category label .one,
+    #dot-2:checked~.category label .two,
+    #dot-3:checked~.category label .three {
+        background: #9b59b6;
+        border-color: #d9d9d9;
+    }
+    
+    form input[type="radio"] {
+        display: none;
+    }
+    
+    form .button {
+        height: 45px;
+        margin: 35px 0
+    }
+    
+    form .button input {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    
+    form .button input:hover {
+        /* transform: scale(0.99); */
+        background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    }
+    
+    @media(max-width: 584px) {
+        .container {
+            max-width: 100%;
+        }
+        form .user-details .input-box {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        form .category {
+            width: 100%;
+        }
+        .content form .user-details {
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+        .user-details::-webkit-scrollbar {
+            width: 5px;
+        }
+    }
+    
+    @media(max-width: 459px) {
+        .container .content .category {
+            flex-direction: column;
+        }
+    }
+    /* Blue */
+</style>
+
+<body>
+
+    <h2>Welcome Admin
+
+    </h2>
+    <h1 id="h11">Active Merchants</h1>
+    <h4><a href="./homepage.html">Log out</a></h4>
+    <button class="button button1" id="createBtnDisplay">Create Merchant</button>
+
+    <div id="activeM">
+        <table id="table">
+            <tr>
+                <th>S.N</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Key</th>
+                <!-- <th>Edit</th> -->
+            </tr>
+
+        </table>
+    </div>
+
+    <!-- //login form -->
+    <div id="createM">
+        <h3>Create Merchant</h3>
+        <form>
+            <!-- <label for="fname">Business name:</label><br />
+            <input id="fname" name="fname" type="text" placeholder="Enter your business name" required><br />
+
+            <label for="ea">Email address:</label><br />
+            <input required type="text" id="ea" name="ea" /><br />
+
+            <label for="pn">Phone number:</label><br />
+            <input required type="text" id="pn" name="pn" /><br />
+
+            <label for="address">Address:</label><br />
+            <input required type="text" id="address" name="address" /><br />
+
+            <label for="mid">Merchant Id:</label><br />
+            <input required type="text" id="mid" name="mid" /><br />
+
+            <label for="pkey">Private Key</label><br />
+            <input required type="text" id="pkey" name="pkey" /><br /> -->
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Business Name</span>
+                    <input id="fname" type="text" placeholder="Enter your business name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email Address</span>
+                    <input id="ea" type="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input id="pn" type="text" placeholder="Enter your phone" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Address</span>
+                    <input id="address" type="text" placeholder="Enter your address" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Secret Key</span>
+                    <input id="pkey" type="text" placeholder="Confirm your key" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Merchant Id</span>
+                    <input id="mid" type="integer" placeholder="Enter your id" required>
+                </div>
+            </div>
+        </form>
+
+
+        <button id="create" class="button button1">Create</button>
+    </div>
+    <script src="./createMarchent.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "poppins", sans-serif;
+            box-sizing: border-box;
+        }
+        
+        .hero {
+            background: #1d2026;
+            min-height: 100vh;
+            width: 100%;
+            color: #fff;
+            position: relative;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 20px 8%;
+        }
+        
+        nav .menu-img {
+            width: 25px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        
+        nav .logo {
+            width: 160px;
+            cursor: pointer;
+        }
+        
+        nav ul {
+            flex: 1;
+            text-align: right;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        .phone-container {
+            position: absolute;
+            top: 0;
+            left: 22%;
+            width: 200px;
+        }
+        
+        .phone {
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            margin-top: 120px;
+        }
+        
+        .text-container {
+            max-width: 600px;
+            margin-top: 7%;
+            margin-left: 50%;
+        }
+        
+        .text-container h1 {
+            font-size: 80px;
+            font-weight: 400;
+        }
+        
+        .text-container a {
+            text-decoration: none;
+            background: #00986f;
+            padding: 14px 40px;
+            display: inline-block;
+            color: #fff;
+            font-size: 18px;
+            margin-top: 30px;
+            border-radius: 30px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: #1d2026;
+            color: white;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khalti payement</title>
+</head>
+
+<body>
+    <div class="hero">
+        <nav>
+            <a href="homepage.html">
+                <img src="logo.png" class="logo" />
+            </a>
+            <ul>
+                <li>
+                    <a href="homepage.html"> Home</a>
+                </li>
+                <li>
+                    <a href="merchantlogin.html">Merchant</a>
+                </li>
+                <li>
+                    <a href="adminlogin.html">Admin </a>
+                </li>
+                <li>
+                    <a href="docs.html">Docs </a>
+                </li>
+            </ul>
+            <!-- <button type="button"> click here</button> -->
+        </nav>
+        <div class="phone-container">
+            <img src="security.png" class="phone" />
+        </div>
+
+        <div class="text-container">
+            <h1>
+                Khalti Quick<br /> Url Payment
+            </h1>
+            <p>Welcome to the khalti url payement gateway</p>
+            <a href="docs.html"> Explore More</a>
+        </div>
+    </div>
+    <footer>
+        <p>
+            Samip Aryal<br />
+            <a href="https//samiparyal.com.np">Email</a>
+        </p>
+    </footer>
+</body>
+
+</html>
